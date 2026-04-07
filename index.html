@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sober — Política de Privacidade e Termos de Uso</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --text: #e4e4e7;
+      --muted: #a1a1aa;
+      --accent: #6d28d9;
+      --accent-light: #8b5cf6;
+      --border: #27272a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 1rem;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 0 4rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
+    nav a {
+      color: var(--accent-light);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    nav a:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--accent-light);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.75rem;
+    }
+
+    p, li {
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent-light);
+    }
+
+    .date {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sober</h1>
+      <p>Seu companheiro na jornada de sobriedade</p>
+    </header>
+
+    <nav>
+      <a href="#privacidade">Privacidade</a>
+      <a href="#termos">Termos de Uso</a>
+    </nav>
+
+    <!-- ════════════════════════════════════════════════════════════════════════ -->
+    <!-- POLÍTICA DE PRIVACIDADE                                                 -->
+    <!-- ════════════════════════════════════════════════════════════════════════ -->
+    <section id="privacidade">
+      <h2>Politica de Privacidade</h2>
+      <p class="date">Ultima atualizacao: 7 de abril de 2026</p>
+
+      <p>O <strong>Sober</strong> respeita sua privacidade. Esta politica explica quais dados coletamos, como os usamos e quais sao seus direitos.</p>
+
+      <h3>1. Dados que coletamos</h3>
+      <ul>
+        <li><strong>Conta:</strong> e-mail e senha (armazenada como hash bcrypt — nunca em texto puro).</li>
+        <li><strong>Sobriedade:</strong> tipo de vicio, data de inicio, dias consecutivos, total de dias limpos e gasto mensal declarado.</li>
+        <li><strong>Metas financeiras:</strong> nome da meta e valor total.</li>
+      </ul>
+      <p>Nao coletamos localizacao, contatos, fotos ou qualquer dado do dispositivo alem do necessario para o funcionamento do app.</p>
+
+      <h3>2. Nome ficticio</h3>
+      <p>Ao criar sua conta, o Sober gera automaticamente um <strong>nome ficticio aleatorio</strong> (ex.: "Lobo Claro") para proteger sua identidade. Seu nome real nunca e solicitado.</p>
+
+      <h3>3. Como usamos seus dados</h3>
+      <ul>
+        <li>Manter seu progresso de sobriedade sincronizado entre dispositivos.</li>
+        <li>Calcular economias estimadas com base no gasto mensal declarado.</li>
+        <li>Nenhum dado e vendido, compartilhado com terceiros ou usado para publicidade.</li>
+      </ul>
+
+      <h3>4. Armazenamento e seguranca</h3>
+      <ul>
+        <li>Dados armazenados em banco PostgreSQL com conexao SSL.</li>
+        <li>Senhas protegidas com bcrypt (custo 12).</li>
+        <li>Autenticacao via tokens JWT.</li>
+        <li>Comunicacao exclusivamente via HTTPS.</li>
+        <li>Rate limiting para protecao contra ataques de forca bruta.</li>
+      </ul>
+
+      <h3>5. Seus direitos (LGPD)</h3>
+      <ul>
+        <li><strong>Acesso:</strong> voce pode visualizar todos os seus dados a qualquer momento dentro do app.</li>
+        <li><strong>Exclusao:</strong> voce pode excluir sua conta e todos os dados associados diretamente pelo app. A exclusao e imediata e irreversivel.</li>
+        <li><strong>Portabilidade:</strong> entre em contato para solicitar exportacao dos seus dados.</li>
+      </ul>
+
+      <h3>6. Contato</h3>
+      <p>Para duvidas sobre privacidade: <a href="mailto:murilo@soberapp.com.br">murilo@soberapp.com.br</a></p>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════════════ -->
+    <!-- TERMOS DE USO                                                           -->
+    <!-- ════════════════════════════════════════════════════════════════════════ -->
+    <section id="termos">
+      <h2>Termos de Uso</h2>
+      <p class="date">Ultima atualizacao: 7 de abril de 2026</p>
+
+      <p>Ao usar o <strong>Sober</strong>, voce concorda com os termos abaixo.</p>
+
+      <h3>1. O que o Sober faz</h3>
+      <p>O Sober e um aplicativo de acompanhamento pessoal de sobriedade. Ele ajuda voce a registrar e visualizar seu progresso, calcular economias estimadas e definir metas financeiras.</p>
+
+      <h3>2. O que o Sober nao faz</h3>
+      <ul>
+        <li>O Sober <strong>nao e</strong> um servico medico, terapeutico ou de aconselhamento.</li>
+        <li>O app nao substitui acompanhamento profissional de saude.</li>
+        <li>Nenhuma informacao no app deve ser interpretada como orientacao medica.</li>
+      </ul>
+
+      <h3>3. Sua conta</h3>
+      <ul>
+        <li>Voce e responsavel por manter suas credenciais seguras.</li>
+        <li>Cada pessoa deve ter sua propria conta.</li>
+        <li>Voce pode excluir sua conta a qualquer momento — a exclusao e permanente.</li>
+      </ul>
+
+      <h3>4. Uso aceitavel</h3>
+      <p>Voce concorda em nao:</p>
+      <ul>
+        <li>Tentar acessar contas de outros usuarios.</li>
+        <li>Sobrecarregar o servico com requisicoes automatizadas.</li>
+        <li>Usar o app para qualquer finalidade ilegal.</li>
+      </ul>
+
+      <h3>5. Disponibilidade</h3>
+      <p>O Sober e fornecido "como esta". Faremos nosso melhor para manter o servico disponivel, mas nao garantimos disponibilidade ininterrupta. Podemos descontinuar o servico com aviso previo de 30 dias.</p>
+
+      <h3>6. Propriedade intelectual</h3>
+      <p>O codigo, design e marca do Sober sao de propriedade de seus criadores. Seus dados pessoais pertencem a voce.</p>
+
+      <h3>7. Alteracoes</h3>
+      <p>Podemos atualizar estes termos. Alteracoes significativas serao comunicadas pelo app. O uso continuado apos a notificacao constitui aceitacao.</p>
+
+      <h3>8. Contato</h3>
+      <p>Para duvidas: <a href="mailto:murilo@soberapp.com.br">murilo@soberapp.com.br</a></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Sober. Todos os direitos reservados.</p>
+    </footer>
+  </div>
+</body>
+</html>
